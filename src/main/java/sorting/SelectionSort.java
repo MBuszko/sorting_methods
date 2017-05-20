@@ -41,12 +41,16 @@ public class SelectionSort {
                     peopleToSort temp = tab2[i];
                     tab2[i] = tab2[j];
                     tab2[j] = temp;
+                } else if ((tab2[i].age == tab2[j].age) && (tab2[i].name.substring(0, 1).toLowerCase().hashCode()) > (tab2[j].name.substring(0, 1).toLowerCase().hashCode())) {
+                    peopleToSort temp = tab2[i];
+                    tab2[i] = tab2[j];
+                    tab2[j] = temp;
                 }
             }
         }
-
+        //System.out.println();
         for (int i = 0; i < tab2.length; i++) {
-            System.out.println(tab2[i].age);
+            System.out.println(tab2[i].name + "'s age is " + tab2[i].age);
         }
     }
 }
