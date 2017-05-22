@@ -1,16 +1,13 @@
 package sorting;
 
-/**
- * Created by RENT on 2017-05-19.
- */
 public class BubbleSort {
     public BubbleSort() {
 
         System.out.println("----------");
         System.out.println("Bubble sort example: ");
         System.out.println("----------");
-        int[] tab = {1, -10, 5, 2, -666, -23, 6};
-        if (isAlready(tab) != true) {
+        int[] tab = {5, -666, 23, -6, 4, 1, 2};
+        if (isAlready(tab)) {
             for (int j = 0; j < tab.length; j++) {
                 for (int i = 0; i < tab.length - 1; i++) {
                     if (tab[i] > tab[i + 1]) {
@@ -31,16 +28,13 @@ public class BubbleSort {
 
     //checking if list is already sorted
     public static boolean isAlready(int[] x) {
+        boolean value = false;
         for (int i = 0; i < x.length - 1; i++) {
             if (x[i] < x[i + 1]) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
-
-
+        return value;
 
     }
 }
